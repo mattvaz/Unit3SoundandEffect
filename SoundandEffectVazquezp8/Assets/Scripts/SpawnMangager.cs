@@ -10,6 +10,7 @@ public class SpawnMangager : MonoBehaviour
     private float repeatRate = 2;
     private PlayerController controller;
     private int randomObstacle;
+    private float obstaclePrefabs;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class SpawnMangager : MonoBehaviour
         if(controller.gameOver == false)
         {
             randomObstacle = Random.Range(0, obstaclePrefab.Length);
-           Instantiate(obstaclePrefabs [randomObstacle], spawnPos, obstaclePrefab[randomObstacle].transform.rotyation);
+           Instantiate(obstaclePrefabs[randomObstacle], spawnPos, obstaclePrefab[randomObstacle].transform.rotyation);
         }
       
     }
